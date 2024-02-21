@@ -4,7 +4,7 @@ import './../styles/App.css';
 
 const App = () => {
   const [inputvalue,setInput] = useState("");
-
+    
     const onChangeText = (event)=>{
         setInput(event.target.value);
     }
@@ -12,7 +12,7 @@ const App = () => {
         <>
         <label>Enter your name:</label><br></br><br></br>
         <input onChange={onChangeText}/>
-        {inputvalue && <p>{`Hello ${inputvalue}!`}</p>}
+        {inputvalue==""?<p></p>:<p>{`Hello ${inputvalue}!`}</p>}
         </>    
     );
 }
